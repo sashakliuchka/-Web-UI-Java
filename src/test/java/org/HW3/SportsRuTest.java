@@ -1,4 +1,4 @@
-package lesson3.Homework;
+package org.HW3;
 
 /**
  * @Author Александр Ключка
@@ -6,7 +6,6 @@ package lesson3.Homework;
  **/
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.checkerframework.checker.units.qual.C;
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;

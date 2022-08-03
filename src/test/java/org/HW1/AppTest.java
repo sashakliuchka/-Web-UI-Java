@@ -1,4 +1,4 @@
-package org.lesson1.HW;
+package org.HW1;
 
 import org.junit.jupiter.api.Test;
 
