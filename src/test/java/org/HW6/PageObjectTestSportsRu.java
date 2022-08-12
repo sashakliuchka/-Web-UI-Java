@@ -40,6 +40,7 @@ public class PageObjectTestSportsRu {
         new MainPage(driver).clickSingInButton()
                 .login("fodehi2154@aregods.com", "1234567890");
 
+
     }
 
     @AfterEach
