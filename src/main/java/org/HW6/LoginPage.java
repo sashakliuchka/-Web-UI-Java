@@ -11,9 +11,8 @@ public class LoginPage extends BasePage {
         super(driver);
     }
 
-    private final String emailIdLocator = "email";
-
-    @FindBy(xpath = "/html/body/div[1]/div/div/div/div[1]/div/div[2]/div[2]/div/div[1]/div/form/div[2]/label/input")
+    private final String emailXpathLocator = "//div[@class='auth_form-row']//input[@class='authlogin-input auth_login-input_email input input_size_extra-large']";
+    @FindBy(xpath = emailXpathLocator)
     private WebElement emailField;
 
     @FindBy(xpath = "//input[@name=\"password\"][@placeholder=\"Ваш пароль\"]")
@@ -23,8 +22,8 @@ public class LoginPage extends BasePage {
     private WebElement signInButton;
 
     public MainPage login(String login, String password) {
-        webDriverWait.until(ExpectedConditions.visibilityOf(emailField));
-        //webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.id(emailIdLocator)));
+        //webDriverWait.until(ExpectedConditions.visibilityOf(emailField));
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(emailXpathLocator)));
         emailField.sendKeys(login);
         passwordField.sendKeys(password);
         signInButton.click();
