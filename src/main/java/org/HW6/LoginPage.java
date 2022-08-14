@@ -6,19 +6,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+
 public class LoginPage extends BasePage {
     public LoginPage(WebDriver driver) {
         super(driver);
     }
 
-    private final String emailXpathLocator = "//div[@class='auth_form-row']//input[@class='authlogin-input auth_login-input_email input input_size_extra-large']";
+    private final String emailXpathLocator = "//div[@class='auth__form-row']//input[@class='auth__login-input auth__login-input_email input input_size_extra-large']";
+
     @FindBy(xpath = emailXpathLocator)
     private WebElement emailField;
 
-    @FindBy(xpath = "//input[@name=\"password\"][@placeholder=\"Ваш пароль\"]")
+    @FindBy(xpath = "//div[@class='auth__form-row']//input[@class='auth__login-input input input_size_extra-large']")
     private WebElement passwordField;
 
-    @FindBy(xpath = "//button[@type=\"submit\"][@data-event-category=\"user\"][@data-event-name=\"auth/success\"]")
+    @FindBy(xpath = "//button[@data-event-name='auth/success']")
     private WebElement signInButton;
 
     public MainPage login(String login, String password) {

@@ -1,6 +1,5 @@
 package org.HW6;
 
-import org.lesson6.WomenSuggestPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,13 +9,13 @@ public class  MainMenuBlock extends BasePage {
         super(driver);
     }
 
-    @FindBy(xpath = "//li//a[@title='Women']")
-    private WebElement womenButton;
+    @FindBy(xpath = "//div[@isparent]//a[@href=\"/football/\"]")
+    private WebElement footballButton;
 
-    public WomenSuggestPage hoverWomenButton() {
-        actions.moveToElement(womenButton)
+    public FootballSuggestPage footballButton() {
+        actions.moveToElement(footballButton)
                 .build()
                 .perform();
-        return new WomenSuggestPage(driver);
+        return new FootballSuggestPage(driver);
     }
 }
