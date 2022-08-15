@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Mon Aug 15 16:34:17 MSK 2022","Mon Aug 15 16:34:38 MSK 2022","21074","","org.HW6.PageObjectTestSportsRu","","org.HW6.PageObjectTestSportsRu","LoginTest","LoginTest()",""
