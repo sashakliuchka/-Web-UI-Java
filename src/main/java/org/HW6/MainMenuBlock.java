@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class  MainMenuBlock extends BasePage {
+public class MainMenuBlock extends BasePage {
     public MainMenuBlock(WebDriver driver) {
         super(driver);
     }
@@ -13,9 +13,7 @@ public class  MainMenuBlock extends BasePage {
     private WebElement footballButton;
 
     public FootballSuggestPage footballButton() {
-        actions.moveToElement(footballButton)
-                .build()
-                .perform();
+        footballButton.click();
         return new FootballSuggestPage(driver);
     }
 }

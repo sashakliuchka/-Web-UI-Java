@@ -1,9 +1,6 @@
 package org.HW6;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 /**
@@ -25,15 +22,17 @@ public class PageObjectTestSportsRu {
         driver = new ChromeDriver();
         driver.get("https://www.sports.ru/");
     }
-
+    @DisplayName("Страница трансферы ")
     @Test
     void LoginTest() throws InterruptedException {
-        new MainPage(driver).clickSingInButton()
+        final TransfersPage transfersPage = new MainPage(driver).clickSingInButton()
 
                 .login("fodehi2154@aregods.com", "1234567890")
                 .mainMenuBlock.footballButton()
                 .clickTransfersButton()
                 .ShowTop7transfer();
+
+
     }
 
     @AfterEach
