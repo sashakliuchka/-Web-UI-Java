@@ -28,12 +28,14 @@ public class PageObjectTestSportsRu {
 
     @Test
     void LoginTest() throws InterruptedException {
-        new MainPage(driver).clickSingInButton()
+        final TransfersPage transfersPage = new MainPage(driver).clickSingInButton()
 
                 .login("fodehi2154@aregods.com", "1234567890")
                 .mainMenuBlock.footballButton()
                 .clickTransfersButton()
                 .ShowTop7transfer();
+
+
     }
 
     @AfterEach
