@@ -12,8 +12,10 @@ public class MainMenuBlock extends BasePage {
     @FindBy(xpath = "//div[@isparent]//a[@href=\"/football/\"]")
     private WebElement footballButton;
 
-    public FootballSuggestPage footballButton() {
-        footballButton.click();
+    public FootballSuggestPage MoveFootballButton() {
+        actions.moveToElement(footballButton)
+                .build()
+                .perform();
         return new FootballSuggestPage(driver);
     }
 }
